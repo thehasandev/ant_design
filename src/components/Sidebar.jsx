@@ -34,7 +34,11 @@ const items = [
   ];
   
     const onClick = (e) => {
-      console.log('click ', e.domEvent.target);
+    
+      if(e.key == 1){
+       
+      }
+
     }
   
 
