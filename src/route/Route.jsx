@@ -3,6 +3,8 @@ import Home from '../pages/Home';
 import Error from '../pages/Error';
 import { createBrowserRouter } from 'react-router-dom';
 import RoutesLayouts from '../components/RoutesLayouts';
+import From from '../pages/From';
+
 
 const Route = createBrowserRouter([
     {
@@ -12,6 +14,10 @@ const Route = createBrowserRouter([
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "/from",
+          element: <From />,
         },
       ],
     },
