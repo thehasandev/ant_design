@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -10,6 +11,7 @@ function getItem(label, key, icon, children, type) {
     type,
   };
 }
+
 
 const items = [
     getItem('Drop Down One', 'sub1', <MailOutlined />, [
@@ -32,17 +34,21 @@ const items = [
     ]),
     getItem('Group', 'grp', null, [getItem('Option 13', '13'), getItem('Option 14', '14')], 'group'),
   ];
-  
-    const onClick = (e) => {
-    
-      if(e.key == 1){
-       
-      }
 
-    }
-  
+
 
 function Sidebar() {
+    const navigate = useNavigate()
+    const onClick = (e) => {
+    
+        if(e.key == 1){
+         navigate("/")
+        }
+        if(e.key == 2){
+         navigate("/from")
+        }
+  
+      }
   return (
     <Menu
       onClick={onClick}
